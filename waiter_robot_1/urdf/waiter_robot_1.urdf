@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="waiter_robot_1">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.068688 0.12292 -0.038615"
+        rpy="0 0 0" />
+      <mass
+        value="4.3045" />
+      <inertia
+        ixx="0.051134"
+        ixy="-5.7053E-08"
+        ixz="-4.8944E-08"
+        iyy="0.070862"
+        iyz="-1.5815E-08"
+        izz="0.02574" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://waiter_robot_1/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://waiter_robot_1/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="wheel_L_link">
+    <inertial>
+      <origin
+        xyz="1.8976E-08 1.8319E-09 -0.033574"
+        rpy="0 0 0" />
+      <mass
+        value="0.65022" />
+      <inertia
+        ixx="0.0015508"
+        ixy="4.122E-10"
+        ixz="-1.5313E-10"
+        iyy="0.0015508"
+        iyz="-2.3998E-11"
+        izz="0.0029007" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://waiter_robot_1/meshes/wheel_L_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://waiter_robot_1/meshes/wheel_L_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel_L_joint"
+    type="continuous">
+    <origin
+      xyz="-0.075 0.1942 -0.0125"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="wheel_L_link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="wheel_R_link">
+    <inertial>
+      <origin
+        xyz="-1.7975E-08 -0.021726 6.351E-09"
+        rpy="0 0 0" />
+      <mass
+        value="0.65022" />
+      <inertia
+        ixx="0.0015508"
+        ixy="-1.4895E-10"
+        ixz="3.3241E-10"
+        iyy="0.0029007"
+        iyz="4.2896E-11"
+        izz="0.0015508" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://waiter_robot_1/meshes/wheel_R_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://waiter_robot_1/meshes/wheel_R_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel_R_joint"
+    type="continuous">
+    <origin
+      xyz="-0.075 -0.1389 -0.0125"
+      rpy="0 -0.43586 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="wheel_R_link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="castor_base_L_link">
+    <inertial>
+      <origin
+        xyz="-0.0098504 -0.026563 -0.00015509"
+        rpy="0 0 0" />
+      <mass
+        value="0.035111" />
+      <inertia
+        ixx="9.0133E-06"
+        ixy="1.704E-06"
+        ixz="-2.4444E-10"
+        iyy="1.021E-05"
+        iyz="3.4024E-10"
+        izz="8.4218E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://waiter_robot_1/meshes/castor_base_L_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.5 0.5 0.5 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://waiter_robot_1/meshes/castor_base_L_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="castor_base_L_joint"
+    type="continuous">
+    <origin
+      xyz="0.15472 0.0925 -0.0831"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="castor_base_L_link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="castor_wheel_L_link">
+    <inertial>
+      <origin
+        xyz="-3.8164E-17 -0.01 1.249E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.033671" />
+      <inertia
+        ixx="6.366E-06"
+        ixy="-4.7629E-21"
+        ixz="6.3527E-22"
+        iyy="1.0844E-05"
+        iyz="1.3927E-21"
+        izz="6.366E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://waiter_robot_1/meshes/castor_wheel_L_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.1098 0.1098 0.1098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://waiter_robot_1/meshes/castor_wheel_L_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="castor_wheel_L_joint"
+    type="continuous">
+    <origin
+      xyz="-0.019934 -0.01 -0.01"
+      rpy="-1.5708 0 1.8312" />
+    <parent
+      link="castor_base_L_link" />
+    <child
+      link="castor_wheel_L_link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="castor_base_R_link">
+    <inertial>
+      <origin
+        xyz="-0.0098504 -0.026563 -0.00015509"
+        rpy="0 0 0" />
+      <mass
+        value="0.035111" />
+      <inertia
+        ixx="9.0133E-06"
+        ixy="1.704E-06"
+        ixz="-2.4444E-10"
+        iyy="1.021E-05"
+        iyz="3.4024E-10"
+        izz="8.4218E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://waiter_robot_1/meshes/castor_base_R_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.5 0.5 0.5 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://waiter_robot_1/meshes/castor_base_R_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="castor_base_R_joint"
+    type="continuous">
+    <origin
+      xyz="0.15472 -0.0915 -0.0831"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="castor_base_R_link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="castor_wheel_R_link">
+    <inertial>
+      <origin
+        xyz="-5.2042E-17 -0.01 1.1102E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.033671" />
+      <inertia
+        ixx="6.366E-06"
+        ixy="-4.2415E-21"
+        ixz="-4.2352E-22"
+        iyy="1.0844E-05"
+        iyz="2.1641E-22"
+        izz="6.366E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://waiter_robot_1/meshes/castor_wheel_R_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.1098 0.1098 0.1098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://waiter_robot_1/meshes/castor_wheel_R_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="castor_wheel_R_joint"
+    type="continuous">
+    <origin
+      xyz="-0.019934 -0.01 -0.01"
+      rpy="-1.5708 0 1.8312" />
+    <parent
+      link="castor_base_R_link" />
+    <child
+      link="castor_wheel_R_link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+</robot>
