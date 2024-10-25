@@ -1,0 +1,34 @@
+<launch>
+  <arg name="x_pos" default="0.0"/>
+  <arg name="y_pos" default="0.0"/>
+  <arg name="z_pos" default="0.2"/>
+
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find waiter_robot_1)/worlds/cafe_world_1.world"/>
+    <arg name="paused" value="false"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="gui" value="true"/>
+    <arg name="headless" value="false"/>
+    <arg name="debug" value="false"/>
+  </include>
+
+  <param 
+  	name="robot_description" 
+  	command="$(find xacro)/xacro --inorder $(find waiter_robot_1)/urdf/waiter_robot_1.urdf.xacro" 
+  />
+
+  <node pkg="gazebo_ros" 
+  	type="spawn_model" 
+  	name="spawn_urdf"  
+  	args="-urdf -model waiter_robot_1 -x $(arg x_pos) -y $(arg y_pos) -z $(arg z_pos) -param robot_description" 
+  />
+
+
+  <!-- Extended Kalman Filter from robot_pose_ekf Node-->
+  <!--node pkg="robot_localization" type="ekf_localization_node" name="ekf_localization" clear_params="true">
+    <rosparam command="load" file="$(find waiter_robot_1)/config/ekf_template.yaml" />
+  </node-->
+  
+  
+  
+</launch>

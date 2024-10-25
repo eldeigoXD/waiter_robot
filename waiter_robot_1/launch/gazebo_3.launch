@@ -1,0 +1,40 @@
+<launch>
+
+  <include
+    file="$(find gazebo_ros)/launch/empty_world.launch" 
+  />
+  
+  <node
+    name="tf_footprint_base"
+    pkg="tf"
+    type="static_transform_publisher"
+    args="0 0 0 0 0 0 base_link base_footprint 40" 
+  />
+    
+
+  <arg name="x_pos" default="0.0"/>
+  <arg name="y_pos" default="0.0"/>
+  <arg name="z_pos" default="0.3"/>
+
+
+
+  <param 
+  	name="robot_description" 
+  	command="$(find xacro)/xacro --inorder $(find waiter_robot_1)/urdf/waiter_robot_1.urdf.xacro" 
+  />
+
+  <node pkg="gazebo_ros" 
+  	type="spawn_model" 
+  	name="spawn_urdf"  
+  	args="-urdf -model waiter_robot_1 -x $(arg x_pos) -y $(arg y_pos) -z $(arg z_pos) -param robot_description" 
+  />
+
+
+  <!-- Extended Kalman Filter from robot_pose_ekf Node-->
+  <node pkg="robot_localization" type="ekf_localization_node" name="ekf_localization" clear_params="true">
+    <rosparam command="load" file="$(find waiter_robot_1)/config/ekf_template.yaml" />
+  </node>
+  
+  
+  
+</launch>

@@ -1,0 +1,5 @@
+scan_destination_topic: /combined_scan
+destination_frame: base_link
+cloud_destination_topic: /merged_cloud
+laserscan_topics: ["/scan", "/kinect_scan"]
+

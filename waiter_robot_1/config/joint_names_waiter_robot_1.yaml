@@ -1,1 +1,1 @@
-controller_joint_names: ['', 'wheel_L_joint', 'wheel_R_joint', 'castor_base_L_joint', 'castor_wheel_L_joint', 'castor_base_R_joint', 'castor_wheel_R_joint', ]
+controller_joint_names: ['','base_joint', 'wheel_left_joint', 'wheel_right_joint', 'castor_base_L_joint', 'castor_wheel_L_joint', 'castor_base_R_joint', 'castor_wheel_R_joint', 'imu_joint','scan_joint',]

@@ -1,0 +1,16 @@
+<launch>
+
+
+
+  <!-- Lanzar el LIDAR -->
+  <include file="$(find ldlidar_stl_ros)/launch/ld19.launch"/>
+
+  <!-- Lanzar el nodo de fusi�n de ira_laser_tools -->
+  <node pkg="ira_laser_tools" name="laserscan_multi_merger" type="laserscan_multi_merger" output="screen">
+    <param name="destination_frame" value="base_link"/>
+    <param name="cloud_destination_topic" value="/merged_cloud"/>
+    <param name="scan_destination_topic" value="/scan"/>
+    <param name="laserscan_topics" value="/lidar_scan /kinect_scan" /> 
+  </node>
+
+</launch>

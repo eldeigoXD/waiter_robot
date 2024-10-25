@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="Robot_mesero_URDF">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.000165211850644831 -8.73896200420665E-06 0.432528590081061"
+        rpy="0 0 0" />
+      <mass
+        value="85.8884379566327" />
+      <inertia
+        ixx="1.82910251215775"
+        ixy="-1.19238354712361E-05"
+        ixz="0.000257431001618049"
+        iyy="2.32684787340673"
+        iyz="1.17780410480692E-05"
+        izz="3.16843781159352" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot_mesero_URDF/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot_mesero_URDF/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="wheel_left_link">
+    <inertial>
+      <origin
+        xyz="-2.8058E-08 2.6662E-08 0.0015805"
+        rpy="0 0 0" />
+      <mass
+        value="0.65544" />
+      <inertia
+        ixx="0.0015514"
+        ixy="2.0654E-10"
+        ixz="5.4434E-09"
+        iyy="0.0015514"
+        iyz="-3.8789E-11"
+        izz="0.0029017" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot_mesero_URDF/meshes/wheel_left_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot_mesero_URDF/meshes/wheel_left_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel_left_joint"
+    type="continuous">
+    <origin
+      xyz="-0.125 0.1824 -0.0155"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="wheel_left_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      effort="100"
+      velocity="100" />
+    <dynamics
+      damping="0.1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="wheel_right_link">
+    <inertial>
+      <origin
+        xyz="-4.1059E-08 -2.6654E-08 -0.0015805"
+        rpy="0 0 0" />
+      <mass
+        value="0.65544" />
+      <inertia
+        ixx="0.0015514"
+        ixy="-2.069E-10"
+        ixz="5.7341E-09"
+        iyy="0.0015514"
+        iyz="-3.8871E-11"
+        izz="0.0029017" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot_mesero_URDF/meshes/wheel_right_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot_mesero_URDF/meshes/wheel_right_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel_right_joint"
+    type="continuous">
+    <origin
+      xyz="-0.125 -0.1824 -0.0155"
+      rpy="1.5708 0 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="wheel_right_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      effort="100"
+      velocity="100" />
+    <dynamics
+      damping="0.1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="castor_base_L_link">
+    <inertial>
+      <origin
+        xyz="-0.0083614 0.00017719 0.010491"
+        rpy="0 0 0" />
+      <mass
+        value="0.030593" />
+      <inertia
+        ixx="8.6624E-06"
+        ixy="2.4444E-10"
+        ixz="1.704E-06"
+        iyy="8.4062E-06"
+        iyz="-3.4024E-10"
+        izz="9.8595E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot_mesero_URDF/meshes/castor_base_L_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.78039 0.76078 0.74118 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot_mesero_URDF/meshes/castor_base_L_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="castor_base_L_joint"
+    type="continuous">
+    <origin
+      xyz="0.236 0.1775 -0.0506"
+      rpy="-3.1416 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="castor_base_L_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      effort="100"
+      velocity="100" />
+    <dynamics
+      damping="0.1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="castor_wheel_L_link">
+    <inertial>
+      <origin
+        xyz="-1.11022302462516E-16 -4.35207425653061E-14 -5.55111512312578E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.0336706801177874" />
+      <inertia
+        ixx="6.36596965856411E-06"
+        ixy="7.47658425633633E-21"
+        ixz="-1.58199295078356E-21"
+        iyy="6.36596965856409E-06"
+        iyz="3.18892996557024E-20"
+        izz="1.08435063670461E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot_mesero_URDF/meshes/castor_wheel_L_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.109803921568627 0.109803921568627 0.109803921568627 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot_mesero_URDF/meshes/castor_wheel_L_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="castor_wheel_L_joint"
+    type="continuous">
+    <origin
+      xyz="-0.019934 0 0.0295"
+      rpy="1.5708 0 0" />
+    <parent
+      link="castor_base_L_link" />
+    <child
+      link="castor_wheel_L_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      effort="100"
+      velocity="100" />
+    <dynamics
+      damping="0.1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="castor_base_R_link">
+    <inertial>
+      <origin
+        xyz="-0.00836141679691838 0.000177188135569883 0.0104913734347865"
+        rpy="0 0 0" />
+      <mass
+        value="0.0305932213251027" />
+      <inertia
+        ixx="8.662396335214E-06"
+        ixy="2.44437761939695E-10"
+        ixz="1.7039828406361E-06"
+        iyy="8.40624476511693E-06"
+        iyz="-3.40244805741926E-10"
+        izz="9.85948397193607E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot_mesero_URDF/meshes/castor_base_R_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.780392156862745 0.76078431372549 0.741176470588235 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot_mesero_URDF/meshes/castor_base_R_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="castor_base_R_joint"
+    type="continuous">
+    <origin
+      xyz="0.236 -0.1775 -0.0506"
+      rpy="-3.1416 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="castor_base_R_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      effort="100"
+      velocity="100" />
+    <dynamics
+      damping="0.1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="castor_wheel_R_link">
+    <inertial>
+      <origin
+        xyz="-1.11022302462516E-16 -1.07913677993565E-13 -3.33066907387547E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.0336706801177873" />
+      <inertia
+        ixx="6.36596965856411E-06"
+        ixy="6.5388129046162E-21"
+        ixz="-5.54548866214357E-21"
+        iyy="6.36596965856409E-06"
+        iyz="3.18423654633245E-20"
+        izz="1.08435063670461E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot_mesero_URDF/meshes/castor_wheel_R_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.109803921568627 0.109803921568627 0.109803921568627 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot_mesero_URDF/meshes/castor_wheel_R_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="castor_wheel_R_joint"
+    type="continuous">
+    <origin
+      xyz="-0.019934 0 0.0295"
+      rpy="1.5708 0 0" />
+    <parent
+      link="castor_base_R_link" />
+    <child
+      link="castor_wheel_R_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      effort="100"
+      velocity="100" />
+    <dynamics
+      damping="0.1"
+      friction="0.1" />
+  </joint>
+</robot>

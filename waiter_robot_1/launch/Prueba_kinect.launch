@@ -1,0 +1,21 @@
+<launch>
+
+
+
+  <!-- Lanzar el Kinect -->
+  <include file="$(find freenect_launch)/launch/freenect.launch">
+    <arg name="depth_registration" value="true"/>
+  </include>
+
+  <!-- Convertir imagen de profundidad a escaneo l�ser -->
+  <node pkg="depthimage_to_laserscan" type="depthimage_to_laserscan" name="depthimage_to_laserscan" output="screen">
+   
+    <param name="output_frame" value="camera_depth_frame"/>
+    <param name="range_min" value="0.5"/>
+    <param name="range_max" value="5.0"/>
+    <param name="scan_height" value="250"/>
+    <remap from="image" to="/camera/depth_registered/image_raw"/>
+    <remap from="camera_info" to="/camera/depth_registered/camera_info"/>
+    <remap from="/scan" to="/kinect_scan"/>
+  </node>
+</launch>
